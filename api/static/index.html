@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Call/Chat</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>WebRTC Call/Chat</h1>
+    <div id="room-controls">
+        <button id="create-room">Create Room</button>
+        <button id="join-room">Join Room</button>
+        <p id="room-id"></p>
+    </div>
+    <div id="videos">
+        <div class="video-container">
+            <video id="localVideo" autoplay muted></video>
+            <div id="local-controls">
+                <button id="toggle-camera">Turn On Camera</button>
+                <button id="toggle-microphone">Turn Off Microphone</button>
+            </div>
+        </div>
+        <div class="video-container">
+            <video id="remoteVideo" autoplay></video>
+            <div id="remote-controls">
+                <button id="remote-camera-status" disabled>Camera: Unknown</button>
+                <button id="remote-microphone-status" disabled>Microphone: Unknown</button>
+            </div>
+        </div>
+    </div>
+    <div id="chat">
+        <h2>Chat</h2>
+        <div id="chat-box"></div>
+        <input id="chat-input" type="text" placeholder="Type a message">
+        <button id="send-message">Send</button>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

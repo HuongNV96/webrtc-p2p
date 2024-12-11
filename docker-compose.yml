@@ -1,0 +1,23 @@
+version: '3'
+services:
+  api:
+    build:
+      context: ./api
+    container_name: api-container
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+  signaling:
+    build:
+      context: ./signaling
+    container_name: signaling-container
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
